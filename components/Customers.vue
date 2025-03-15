@@ -18,10 +18,14 @@
                     class="flex flex-col px-6 py-4 transition-colors duration-300 transform rounded-lg shadow-md">
 
                     <p class="text-lg font-medium">{{ plan.name }}</p>
-                    <h4 class="mt-2 text-3xl font-semibold">
+                    <h4 class="mt-2 text-3xl font-semibold"
+                        :class="{ 'text-white': plan.highlight, 'text-gray-800 dark:text-white': !plan.highlight }">
                         {{ `₹${plan.monthly} / Month` }}
                     </h4>
-                    <p class="mt-4 text-gray-500 dark:text-gray-300">{{ plan.description }}</p>
+                    <p class="mt-4"
+                        :class="{ 'text-gray-300': plan.highlight, 'text-gray-500 dark:text-gray-300': !plan.highlight }">
+                        {{ plan.description }}
+                    </p>
 
                     <div class="mt-8 space-y-4">
                         <div v-for="feature in plan.features" :key="feature" class="flex items-center">
@@ -31,7 +35,10 @@
                                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span class="ml-4 text-gray-700 dark:text-gray-300">{{ feature }}</span>
+                            <span class="ml-4"
+                                :class="{ 'text-gray-300': plan.highlight, 'text-gray-700 dark:text-gray-300': !plan.highlight }">
+                                {{ feature }}
+                            </span>
                         </div>
                     </div>
 
@@ -62,7 +69,8 @@ const pricingData = ref([
         "2 sessions per month", 
         "Basic muscle therapy", 
         "Posture correction tips"
-      ] 
+      ],
+      highlight: false // Add this property to control the dark background
     },
     { 
       name: "Standard", 
@@ -73,7 +81,8 @@ const pricingData = ref([
         "Advanced physiotherapy techniques", 
         "Pain relief strategies", 
         "Personalized exercise plan"
-      ] 
+      ],
+      highlight: false // Add this property to control the dark background
     },
     { 
       name: "Advanced", 
@@ -85,7 +94,8 @@ const pricingData = ref([
         "Sports physiotherapy", 
         "Post-surgery care",
         "24/7 therapist consultation"
-      ]
+      ],
+      highlight: true // Add this property to control the dark background
     },
     { 
       name: "Premium", 
@@ -97,7 +107,8 @@ const pricingData = ref([
         "Exclusive access to advanced equipment", 
         "Priority booking",
         "Dedicated therapist"
-      ] 
+      ],
+      highlight: false // Add this property to control the dark background
     },
   ]);
 </script>
