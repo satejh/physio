@@ -45,7 +45,7 @@
           </span>
           <h2 class="mt-4 text-lg font-medium text-gray-800 dark:text-white">Phone</h2>
           <p class="mt-2 text-gray-500 dark:text-gray-400">Call for inquiries.</p>
-          <p class="mt-2 text-blue-500 dark:text-blue-400">+91 8208442663</p>
+          <p class="mt-2 text-blue-500 dark:text-blue-400">+91 8830535891</p>
         </div>
       </div>
     </div>

@@ -94,8 +94,7 @@ const pricingData = ref([
         "Sports physiotherapy", 
         "Post-surgery care",
         "24/7 therapist consultation"
-      ],
-      highlight: true // Add this property to control the dark background
+      ]
     },
     { 
       name: "Premium", 
