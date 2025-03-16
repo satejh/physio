@@ -1,1 +1,6 @@
+# START nuxt-robots (indexable)
+User-agent: *
+Disallow: 
 
+Sitemap: https://physiotherapy.blogerpedia.com/sitemap.xml
+# END nuxt-robots
